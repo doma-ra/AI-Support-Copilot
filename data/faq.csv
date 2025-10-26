@@ -1,0 +1,3 @@
+id,question,answer
+PAY-001,Kartenzahlung fehlgeschlagen,Starte das Terminal neu und prüfe die Netzwerkverbindung.
+REC-001,Rechnung neu drucken,Öffne den Belegverlauf und wähle 'Neu drucken'.
