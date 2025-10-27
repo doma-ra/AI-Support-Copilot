@@ -1,5 +1,5 @@
 [
-  {"id":"kb/payments/terminal-restart","title":"Terminal Neustart","path":"kb/articles/payments_terminal_restart.md","keywords":["kartenzahlung","terminal","neustart","zahlung fehlgeschlagen"]},
+  {"id":"kb/payments/terminal-restart","title":"Terminal Neustart","path":"kb/articles/payments_terminal_restart.md","keywords":["kartenzahlung","terminal","neustart","zahlung","fehlgeschlagen"]},
   {"id":"kb/receipt/reprint","title":"Rechnung neu drucken","path":"kb/articles/receipt_reprint.md","keywords":["rechnung","beleg","neu drucken","reprint"]},
-  {"id":"kb/network/check","title":"Netzwerk prüfen","path":"kb/articles/network_check.md","keywords":["netzwerk","router","internet","ping"]}
+  {"id":"kb/network/check","title":"Netzwerk prüfen","path":"kb/articles/network_check.md","keywords":["netzwerk","router","internet","ping","prüfen"]}
 ]

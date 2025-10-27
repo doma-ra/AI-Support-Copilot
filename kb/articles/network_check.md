@@ -1,2 +1,2 @@
 # Netzwerk prüfen
-Router/Modem Status prüfen. Kasse hat Internet? Ping zum Gateway.
+Router/Modem prüfen, Internet an der Kasse verifizieren, Ping zum Gateway.

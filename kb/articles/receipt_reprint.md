@@ -1,2 +1,2 @@
 # Rechnung neu drucken
-App: Belegverlauf öffnen → Beleg auswählen → "Neu drucken".
+Belegverlauf öffnen → Beleg wählen → "Neu drucken".
