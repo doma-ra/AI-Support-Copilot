@@ -1,4 +1,7 @@
 # AI-Support-Copilot (MVP)
+![Tests](https://img.shields.io/badge/tests-passing-green)
+![tests](https://github.com/doma-ra/AI-Support-Copilot/actions/workflows/pytest.yml/badge.svg)
+
 
 **Zweck:** Chats/Incidents → **striktes JSON**, **KB-gestützte Antworten**, **aktionsfähige Tickets**.  
 **Stack:** Python, pydantic, pytest, Typer.
@@ -34,4 +37,4 @@ python cli.py ab
 Prompt v2 mit echtem Provider (per .env) + Repair-Retry
 Embedding-Retriever statt Keywords
 Mehr Regressionstests und CI (GitHub Actions)
-EOF
+* „A/B-Report zeigt Fallback-Vergleich bei unbekannten Anfragen (reports/ab.csv).“

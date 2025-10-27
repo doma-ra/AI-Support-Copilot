@@ -6,6 +6,7 @@ def test_invalid_json_is_caught():
     assert "JSONDecodeError" in msg
 
 def test_schema_violation_is_caught():
+    # severity ist absichtlich ungültig
     raw = '{"intent":"payment","severity":"ultra","answer":"x"}'
     ok, msg = validate_raw(raw)
     assert ok is False

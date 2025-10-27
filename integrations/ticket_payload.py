@@ -5,6 +5,7 @@ from bot.schema import BotResponse
 REQUIRED = ["source","customer","summary","intent","severity","escalate"]
 
 def build_ticket(resp: BotResponse, *, source: str, customer: str, query: str) -> Dict:
+    """Konvertiert BotResponse in ein Jira/Zendesk-ähnliches Payload."""
     payload = {
         "created_at": datetime.utcnow().isoformat() + "Z",
         "source": source,
@@ -17,12 +18,15 @@ def build_ticket(resp: BotResponse, *, source: str, customer: str, query: str) -
         "escalate": resp.escalate,
         "handoff_note": resp.handoff_note,
         "faq_id": resp.faq_id,
+        # rudimentäre Felder für L2
         "steps_to_reproduce": [],
         "expected": "",
         "actual": query,
         "next_action": ("Follow KB" if resp.kb_refs else "Investigate/L2"),
     }
+    # Minimalvalidierung
     for k in REQUIRED:
         if payload.get(k) in (None, ""):
             raise ValueError(f"ticket missing field: {k}")
     return payload
+
