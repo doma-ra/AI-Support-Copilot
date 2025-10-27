@@ -1,0 +1,5 @@
+[
+  {"id":"kb_it/sso/login","title":"SSO Login Problem","path":"kb_it/articles/sso_login_issue.md","keywords":["sso","login","anmeldung","okta","azure","microsoft"]},
+  {"id":"kb_it/vpn/connect","title":"VPN verbindet nicht","path":"kb_it/articles/vpn_connectivity.md","keywords":["vpn","verbindung","connect","tunnel","timeout"]},
+  {"id":"kb_it/printer/troubleshoot","title":"Drucker Problem","path":"kb_it/articles/printer_troubleshoot.md","keywords":["drucker","printing","warteschlange","paper","toner"]}
+]
