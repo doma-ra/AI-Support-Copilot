@@ -12,6 +12,8 @@ python -m eval.evaluator
 python cli.py ask "Kartenzahlung fehlgeschlagen"
 python cli.py ticket "Rechnung nochmal drucken" --customer "Demo KG"
 
+```
+
 ## Features
 JSON-Validität (pydantic-Schema, 100 % im MVP)
 Router: FAQ-Regeln + KB-Fallback (keine Halluzination)
@@ -22,3 +24,14 @@ json_valid_rate: 1.00
 faq_hit_rate: 1.00
 kb_hit_rate: 1.00
 fallback_rate: 0.00
+
+## Beispiele
+python cli.py ask "Kartenzahlung fehlgeschlagen"
+python cli.py ask "Internet langsam, bitte Netzwerk prüfen"
+python cli.py ticket "Kartenzahlung fehlgeschlagen" --customer "Bar M"
+python cli.py ab
+## Nächste Schritte
+Prompt v2 mit echtem Provider (per .env) + Repair-Retry
+Embedding-Retriever statt Keywords
+Mehr Regressionstests und CI (GitHub Actions)
+EOF
