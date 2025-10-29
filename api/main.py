@@ -21,3 +21,14 @@ class TicketIn(BaseModel):
 @app.post("/ticket")
 def ticket(payload: TicketIn):
     return {"ok": True, "payload": payload.model_dump()}
+
+
+@app.get("/health")
+def health():
+    return {"status": "ok"}
+
+@app.get("/version")
+def version():
+    # einfache statische Version; später aus git ableiten
+    return {"name": "allO AI Support Agent Prototype", "version": "0.1.0"}
+
