@@ -1,3 +1,5 @@
 id,question,answer
 PAY-001,Kartenzahlung fehlgeschlagen,Starte das Terminal neu und prüfe die Netzwerkverbindung.
 REC-001,Rechnung neu drucken,Öffne den Belegverlauf und wähle 'Neu drucken'.
+IT-SSO-001,SSO Login geht nicht,Bitte Zeit/Datum prüfen, Cache leeren, IdP-Status checken.
+IT-VPN-001,VPN verbindet nicht,Internet und Client-Version prüfen, ggf. Zertifikat erneuern.

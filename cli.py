@@ -7,6 +7,7 @@ from bot.inference import parse_model_output, validate_raw
 from bot.router import route_faq
 from bot.model import generate_v2
 from integrations.ticket_payload import build_ticket
+from bot.router.support_router import handle_query 
 
 app = typer.Typer(help="AI-Support-Copilot CLI")
 
@@ -36,17 +37,11 @@ def demo():
     typer.echo(example.model_dump_json(indent=2))
 
 @app.command()
-def ask(q: str):
-    """Erst FAQ/KB-Router. Wenn None: Modell v2 (JSON-garantiert)."""
-    res = route_faq(q)
-    if res:
-        typer.echo(res.model_dump_json(indent=2))
-        return
-    ok, out = generate_v2(q)
-    if ok:
-        typer.echo(out.model_dump_json(indent=2))
-        return
-    raise typer.Exit(code=1)
+def ask(q: str, profile: str = "gastro"):
+    """Stellt eine Support-Anfrage an den Router und druckt valides JSON."""
+    resp = handle_query(q, profile=profile)
+    import json
+    print(json.dumps(resp, ensure_ascii=False))
 
 @app.command()
 def ticket(q: str, customer: str = "Demo GmbH", source: str = "chat"):

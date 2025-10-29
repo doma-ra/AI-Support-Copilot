@@ -33,6 +33,10 @@ python cli.py ask "Kartenzahlung fehlgeschlagen"
 python cli.py ask "Internet langsam, bitte Netzwerk prüfen"
 python cli.py ticket "Kartenzahlung fehlgeschlagen" --customer "Bar M"
 python cli.py ab
+### Profile
+- Gastro (Default): `python cli.py ask "Kartenzahlung fehlgeschlagen"`
+- IT: `KB_PROFILE=it python cli.py ask "VPN verbindet nicht"`
+
 ## Nächste Schritte
 Prompt v2 mit echtem Provider (per .env) + Repair-Retry
 Embedding-Retriever statt Keywords
