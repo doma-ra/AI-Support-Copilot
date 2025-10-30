@@ -89,3 +89,21 @@ Ticket-Payloads: reports/ticket_payload.json
 ### Tests
 
 pytest -q
+
+## Demo & Deployment
+
+### Lokaler Start
+bash
+# API starten
+python -m uvicorn api.main:app --reload --port 8001
+
+### Beispielaufrufe
+```bash
+curl -s -X POST http://127.0.0.1:8001/ask \
+  -H "content-type: application/json" \
+  -d '{"query":"Kartenzahlung fehlgeschlagen","profile":"gastro"}'
+
+curl -s -X POST http://127.0.0.1:8001/ticket \
+  -H "content-type: application/json" \
+  -d '{"title":"Bondrucker defekt","description":"Kein Druck seit 14:10","profile":"gastro"}'
+```
