@@ -7,3 +7,6 @@ tiktoken>=0.7
 httpx
 
 python-dotenv
+
+fastapi
+pydantic>=2
