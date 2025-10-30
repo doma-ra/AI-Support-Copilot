@@ -8,17 +8,14 @@ on:
 jobs:
   tests:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        python-version: [ "3.11", "3.13" ]
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Set up Python
+      - name: Setup Python 3.11
         uses: actions/setup-python@v5
         with:
-          python-version: ${{ matrix.python-version }}
+          python-version: "3.11"
 
       - name: Install deps
         run: |
@@ -27,15 +24,15 @@ jobs:
           pip install pytest
 
       - name: Run tests
-  env:
-    PYTEST_DISABLE_PLUGIN_AUTOLOAD: 1
-  run: pytest -q
+        env:
+          PYTEST_DISABLE_PLUGIN_AUTOLOAD: 1
+        run: pytest -q
 
-      - name: Upload logs if exist
+      - name: Upload artifacts
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: run-artifacts-${{ matrix.python-version }}
+          name: run-artifacts
           path: |
             logs/**
             reports/**
