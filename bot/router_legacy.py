@@ -62,6 +62,3 @@ def route_faq(query: str) -> Optional[BotResponse]:
         )
 
     return None
-
-("IT-SSO-001", r"\b(sso|single sign|anmeldung)\b.*(geht nicht|fehlt|fehler)"),
-("IT-VPN-001", r"\b(vpn)\b.*(verbindet|timeout|geht nicht)"),
