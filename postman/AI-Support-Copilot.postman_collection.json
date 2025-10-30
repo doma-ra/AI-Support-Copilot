@@ -1,0 +1,36 @@
+{
+  "info": { "name": "AI-Support-Copilot", "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json" },
+  "item": [
+    {
+      "name": "Health",
+      "request": { "method": "GET", "url": "http://127.0.0.1:8001/health" }
+    },
+    {
+      "name": "Ask - Gastro",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "content-type", "value": "application/json" }],
+        "body": { "mode": "raw", "raw": "{\"query\":\"Kartenzahlung fehlgeschlagen\",\"profile\":\"gastro\"}" },
+        "url": "http://127.0.0.1:8001/ask"
+      }
+    },
+    {
+      "name": "Ask - IT",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "content-type", "value": "application/json" }],
+        "body": { "mode": "raw", "raw": "{\"query\":\"VPN verbindet nicht\",\"profile\":\"it\"}" },
+        "url": "http://127.0.0.1:8001/ask"
+      }
+    },
+    {
+      "name": "Ticket",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "content-type", "value": "application/json" }],
+        "body": { "mode": "raw", "raw": "{\"title\":\"Bondrucker druckt nicht\",\"description\":\"Seit 12:10 kein Bon\",\"profile\":\"gastro\",\"priority\":\"high\"}" },
+        "url": "http://127.0.0.1:8001/ticket"
+      }
+    }
+  ]
+}
